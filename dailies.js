@@ -41,7 +41,7 @@ module.exports = async (client) => {
                         embed:
                             {
                                 color: 3447003,
-                                title: `Phantasy Star Online 2 Emergency Quest`,
+                                title: `Phantasy Star Online 2 Daily Order today`,
                                 url: "http://pso2.js",
                                 thumbnail: {
                                     url: "http://bumped.org/psublog/wp-content/uploads/2011/04/logo_pso2.png"
