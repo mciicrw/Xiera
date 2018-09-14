@@ -1,3 +1,4 @@
+[![dev chat](https://discordapp.com/api/guilds/433519694977302528/widget.png?style=shield)](https://discord.gg/fVsYCp3)
 # Xiera
 Discord bot used for alerting on Emergency Quests on Phantasy Star Online 2
 
