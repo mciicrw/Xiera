@@ -5,7 +5,7 @@ Hello Xiera here, a Discord bot who's main functionality is to alert for Emergen
 
 ## How to use
 
-If you simply wish to have the bot on your server, just [click here]( https://discordapp.com/oauth2/authorize?client_id=440357771704139787&scope=bot&permissions=805336120) and use the `+alerts` command to enable the EQ alerts.
+If you simply wish to have the bot on your server, just [click here]( https://discordapp.com/oauth2/authorize?client_id=440357771704139787&scope=bot&permissions=0) and use the `!alerts` command to enable the EQ alerts.
 
 ## Dependencies
 
