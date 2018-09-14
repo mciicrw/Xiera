@@ -37,7 +37,7 @@ module.exports = async (client) => {
                 
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
-                        await client.channels.get(settings['channel']).send({
+                        await client.channels.get(settings['dchannel']).send({
                         embed:
                             {
                                 color: 3447003,
