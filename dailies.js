@@ -12,11 +12,11 @@ module.exports = async (client) => {
 
         if (data[0]["time"] !== cache["time"]) {
             await fs.writeFile("cache.json", `{ "time" : "${data[0]["time"]}", "i": ${cache["i"] <= 10 ? cache["i"] + 1 : 0} }`);
-            const guilds = client.guilds.filter(guild => { return client.provider.get(guild, "alerts") });
+            const guilds = client.guilds.filter(guild => { return client.provider.get(guild, "dorders") });
             
             for (let guild of guilds) {
-                let settings = await client.provider.get(guild[1], "dorders");
-                // let eqs = data[0]["eqs"].filter(item => { return settings["ships"].includes(item["ship"]) });
+                let settings = await client.provider.get(guild[1], "alerts");
+                let daily = data[0]["daily"].filter(item => { return settings["dchannel"]});
                 let format = [];
                 
                 if (!client.channels.get(settings['dchannel'])) continue;
@@ -32,21 +32,21 @@ module.exports = async (client) => {
                     format.push(`\`ALL SHIPS:\` **${eq['name']}**`);
                 }
 */
-                let donationString = "\n\nSupport Our Server on Paypal!\n(just wait for the link next time XD)";
-                let time = moment(data[0]["when"]);
-//                let string = `:watch:**Emergency Quest Notice in 40 Minutes on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
+                let time = moment(eq[1], 'YYYYMMDD').subtract(1, 'day');
+                let string = data.join('\n');
                 
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
-                        await client.channels.get(settings['dchannel']).send(`@Elevated Alert`, {embed:
+                        await client.channels.get(settings['channel']).send({
+                        embed:
                             {
-                            color: 3447003,
-                            title: "PSO2 Daily orders",
-			    url: "http://pso2.jp",
-			    fields: [{
-				name: "Orders",
-				value: data.join("\n")
-				}]
+                                color: 3447003,
+                                title: `Phantasy Star Online 2 Emergency Quest`,
+                                url: "http://pso2.js",
+                                thumbnail: {
+                                    url: "http://bumped.org/psublog/wp-content/uploads/2011/04/logo_pso2.png"
+                                },
+                                description: string
                             }
                         });
                     } catch (err) {
