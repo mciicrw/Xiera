@@ -49,7 +49,7 @@ All the following commands can be run by mentioning the bot and only work for se
 
 ## Support
 
-If you have any questions or something went wrong, please contact me at `MCII#3619` or `[ Ari Knight ]#9453` [or my discord server](http://discord.gg/fVsYCp3) or Rodrigo at `Kaze#2125` or on [the bot's server](https://discord.gg/0xMXCNAFbH032Ig1).
+If you have any questions or something went wrong, please contact me at `MCII#3619` or `[ Ari Knight ]#9453` [or my discord server](http://discord.gg/fVsYCp3) or Rodrigo at `Kaze#0001` or on Rodrigo's [server](https://discord.gg/0xMXCNAFbH032Ig1).
 
 ## Donations
 
