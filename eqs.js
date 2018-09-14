@@ -34,14 +34,20 @@ module.exports = async (client) => {
 
                 let donationString = "\n\nSupport Our Server on Paypal!\n(just wait for the link next time XD)";
                 let time = moment(data[0]["when"]);
-                let string = `:watch:**Emergency Quest Notice in 40 Minutes on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
+                let string = `:watch:**Emergency Quest Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
                 
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
-                        await client.channels.get(settings['channel']).send(`@Elevated Alert`, {embed:
+                        await client.channels.get(settings['channel']).send({
+                        embed:
                             {
-                            color: 3447003,
-                            description: string
+                                color: 3447003,
+                                title: `Phantasy Star Online 2 Emergency Quest`,
+                                url: "http://pso2.js",
+                                thumbnail: {
+                                    url: "http://bumped.org/psublog/wp-content/uploads/2011/04/logo_pso2.png"
+                                },
+                                description: string
                             }
                         });
                     } catch (err) {
