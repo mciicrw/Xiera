@@ -3,11 +3,11 @@ const Commando = require('discord.js-commando');
 module.exports = class PSO2Commands extends Commando.Command {
     constructor(client) {
         super(client, {
-            name: "alertsdo",
+            name: "orders",
             group: "pso2",
-            memberName: "alertsdo",
-            description: "Enables DO alerts",
-            examples: ["alertsdo #general"],
+            memberName: "orders",
+            description: "Enables Daily Orders alerts",
+            examples: ["orders #general"],
             guildOnly: true,
 
             args: [
