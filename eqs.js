@@ -32,7 +32,7 @@ module.exports = async (client) => {
                     format.push(`\`ALL SHIPS:\` **${eq['name']}**`);
                 }
 
-                let donationString = "\n\nSupport Our Server on BeerPay!\n(https://beerpay.io/mciicrw/Xiera)";
+                let donationString = "\n\nSupport Our Server on PayPal!\n(https://goo.gl/vo56Kj)";
                 let time = moment(data[0]["when"]);
                 let string = `:watch:**Emergency Quest Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
                 
