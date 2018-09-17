@@ -1,4 +1,4 @@
-[![dev chat](https://discordapp.com/api/guilds/433519694977302528/widget.png?style=shield)](https://discord.gg/fVsYCp3)
+[![dev chat](https://discordapp.com/api/guilds/433519694977302528/widget.png?style=shield)](https://discord.gg/fVsYCp3) [![Beerpay](https://beerpay.io/mciicrw/Xiera/badge.svg?style=beer)](https://beerpay.io/mciicrw/Xiera) [![Beerpay](https://beerpay.io/mciicrw/Xiera/make-wish.svg?style=flat)](https://beerpay.io/mciicrw/Xiera)
 # Xiera
 Discord bot used for alerting on Emergency Quests on Phantasy Star Online 2
 
