@@ -29,7 +29,9 @@ module.exports = async (client) => {
                     }
                 }
                 else {
-                    format.push(`\`ALL SHIPS:\` **${eq['name']}**`);
+                    for (let eq of eqs) {
+                        format.push(`\`ALL SHIPS:\` **${eq['name']}**`);
+                    }
                 }
 
                 let donationString = "\n\nSupport Our Server on PayPal!\n(https://goo.gl/vo56Kj)";
