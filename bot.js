@@ -36,6 +36,13 @@ client
     .on('ready', () => {
         console.log(`-> Client ready! \n-> Logged in as ${client.user.username}#${client.user.discriminator}`)
         console.log(`-> Servers: ${client.guilds.array().length}`)
+        client.user.setPresence({
+            game: {
+                name: `${client.guilds.array().length} Server(s) OwO`,
+                type: "STREAMING",
+                url: "https://www.twitch.tv/shigetora"
+            }
+        });
 
     })
 
@@ -44,6 +51,8 @@ client
         console.error('Error in command ${cmd.groupID}:${cmd.memberName}', err)
         
     })
+
+
 
 client.registry
     // Custom groups
