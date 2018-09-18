@@ -32,7 +32,7 @@ module.exports = async (client) => {
                     format.push(`\`ALL SHIPS:\` **${eq['name']}**`);
                 }
 
-                let donationString = "\n\nSupport Our Server on Paypal!\n(just wait for the link next time XD)";
+                let donationString = "\n\nSupport Our Server on Paypal!\n(https://goo.gl/vo56Kj)";
                 let time = moment(data[0]["when"]);
                 let string = `:watch:**Emergency Quest Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
                 
@@ -43,7 +43,7 @@ module.exports = async (client) => {
                             {
                                 color: 3447003,
                                 title: `Phantasy Star Online 2 Emergency Quest`,
-                                url: "http://pso2.js",
+                                url: "http://pso2.jp",
                                 thumbnail: {
                                     url: "http://bumped.org/psublog/wp-content/uploads/2011/04/logo_pso2.png"
                                 },
