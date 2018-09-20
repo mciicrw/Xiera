@@ -34,9 +34,9 @@ module.exports = async (client) => {
                     }
                 }
 
-                let donationString = "\n\nSupport Our Server on PayPal!\n(https://goo.gl/vo56Kj)";
+                let donationString = "\n\nSupport Our Server to help this bot keep alive!\n(just click the link above)";
                 let time = moment(data[0]["when"]);
-                let string = `:watch:**Emergency Quest Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
+                let string = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${donationString}`;
                 
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
@@ -44,8 +44,8 @@ module.exports = async (client) => {
                         embed:
                             {
                                 color: 3447003,
-                                title: `Phantasy Star Online 2 Emergency Quest`,
-                                url: "http://pso2.jp",
+                                title: `Phantasy Star Online 2 Emergency Quest (click to donate the bot)`,
+                                url: "https://goo.gl/vo56Kj",
                                 thumbnail: {
                                     url: "http://bumped.org/psublog/wp-content/uploads/2011/04/logo_pso2.png"
                                 },
