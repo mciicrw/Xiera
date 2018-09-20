@@ -35,14 +35,19 @@ client
     //.on('debug', console.log)
     .on('ready', () => {
         console.log(`-> Client ready! \n-> Logged in as ${client.user.username}#${client.user.discriminator}`)
-        console.log(`-> Servers: ${client.guilds.array().length}`)
-        client.user.setPresence({
-            game: {
-                name: `${client.guilds.array().length} Server(s) OwO`,
-                type: "STREAMING",
-                url: "https://www.twitch.tv/shigetora"
-            }
-        });
+        console.log(`-> Servers: ${client.guilds.size}`)
+            setInterval(function(){
+                let statuses = [`!info`, `@${client.user.username}#${client.user.discriminator} help`, `PSO EQ alert Bot`, `donate and help us`, `with ${client.guilds.size} server(s)`]
+                let string = statuses[Math.floor(Math.random()*statuses.length)];
+                client.user.setPresence({
+                    game:
+                        {
+                            name: string,
+                            status: "STREAMING",
+                            url: "https://www.twitch.tv/shigetora"
+                        }
+                    });
+            }, 7000)
 
     })
 
