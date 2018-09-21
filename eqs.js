@@ -25,18 +25,18 @@ module.exports = async (client) => {
                 if (eqs.length <= 0) continue;
                 if (eqs.length > 0 && eqs.length !== 10) {
                     for (let eq of eqs) {
-                        format.push(`\`SHIP ${eq['ship']}:\` **${eq['name']}**`);
+                        format.push(`**SHIP ${eq['ship']}:** ${eq['name']}`);
                     }
                 }
                 else {
                     for (let eq of eqs) {
-                        format.push(`\`ALL SHIPS:\` **${eq['name']}**`);
+                        format.push(`**ALL SHIPS:** ${eq['name']}`);
                     }
                 }
 
                 let donationString = "\n\nSupport Our Server to help this bot keep alive!\n(just click the link above)";
                 let time = moment(data[0]["when"]);
-                let string = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${donationString}`;
+                let string = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 5 ? donationString : ''}`;
                 
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
