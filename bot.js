@@ -37,7 +37,7 @@ client
         console.log(`-> Client ready! \n-> Logged in as ${client.user.username}#${client.user.discriminator}`)
         console.log(`-> Servers: ${client.guilds.size}`)
             setInterval(function(){
-                let statuses = [`!info`, `@${client.user.username}#${client.user.discriminator} help`, `PSO EQ alert Bot`, `donate and help us`, `with ${client.guilds.size} server(s)`]
+                let statuses = [`${client.guilds.size} server(s) | !info`, `${client.guilds.size} server(s) | @${client.user.username}#${client.user.discriminator} help`, `${client.guilds.size} server(s) | PSO EQ alert Bot`, `${client.guilds.size} server(s) | donate and help us`]
                 let string = statuses[Math.floor(Math.random()*statuses.length)];
                 client.user.setPresence({
                     game:
