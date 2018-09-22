@@ -36,7 +36,7 @@ module.exports = async (client) => {
 
                 let donationString = "\n\nSupport Our Server to help this bot keep alive!\n(just click the link above)";
                 let time = moment(data[0]["when"]);
-                let string = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 5 ? donationString : ''}`;
+                let string = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
                 
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
