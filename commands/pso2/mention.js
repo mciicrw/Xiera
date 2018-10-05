@@ -27,9 +27,9 @@ module.exports = class PSO2Commands extends Commando.Command {
     }
 
     async run(msg, args, client){
-        let channel = args.channel;
+        let role = args.role;
         let dict = {}
-        dict["role"] = args.role;
+        dict["role"] = `<@&${args.role.id}>`;
 
         this.client.provider.set(msg.guild, "role", dict);
         return msg.channel.sendMessage(`${msg.author}`, {embed:
