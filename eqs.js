@@ -4,7 +4,7 @@ const moment = require('moment');
 
 module.exports = async (client) => {
     try {
-        const response = await fetch('http://159.65.1.209:5000/eq/');
+        const response = await fetch('http://35.200.25.13:5000/eq');
         if (response.status !== 200) return;
 
         const data = await response.json();
@@ -13,9 +13,10 @@ module.exports = async (client) => {
         if (data[0]["time"] !== cache["time"]) {
             await fs.writeFile("cache.json", `{ "time" : "${data[0]["time"]}", "i": ${cache["i"] <= 10 ? cache["i"] + 1 : 0} }`);
             const guilds = client.guilds.filter(guild => { return client.provider.get(guild, "alerts") });
-            
+
             for (let guild of guilds) {
                 let settings = await client.provider.get(guild[1], "alerts");
+                let mention = await client.provider.get(guild[1], "role");
                 let eqs = data[0]["eqs"].filter(item => { return settings["ships"].includes(item["ship"]) });
                 let format = [];
                 
@@ -36,11 +37,11 @@ module.exports = async (client) => {
 
                 let donationString = "\n\nSupport Our Server to help this bot keep alive!\n(just click the link above)";
                 let time = moment(data[0]["when"]);
-                let string = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
+                let string = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH:MM")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
                 
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
-                        await client.channels.get(settings['channel']).send({
+                        await client.channels.get(settings['channel']).send(mention['role'], {
                         embed:
                             {
                                 color: 3447003,
