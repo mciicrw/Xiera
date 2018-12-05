@@ -1,4 +1,4 @@
-[![dev chat](https://discordapp.com/api/guilds/312824132897341440/widget.png?style=shield)]( https://discord.gg/uKDqmG8)[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SYJ9PCCAPPJ7U)
+[![dev chat](https://discordapp.com/api/guilds/312824132897341440/widget.png?style=shield)](https://discord.gg/uKDqmG8)[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SYJ9PCCAPPJ7U)
 # Xiera
 Discord bot used for alerting on Emergency Quests on Phantasy Star Online 2
 
