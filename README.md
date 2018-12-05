@@ -1,4 +1,4 @@
-[![dev chat](https://discordapp.com/api/guilds/433519694977302528/widget.png?style=shield)](https://discord.gg/fVsYCp3) [![Liberapay](https://liberapay.com/assets/widgets/donate.svg)](https://liberapay.com/mcii/donate) [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SYJ9PCCAPPJ7U)
+[![dev chat](https://discordapp.com/api/guilds/433519694977302528/widget.png?style=shield)](https://discord.gg/fVsYCp3)[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SYJ9PCCAPPJ7U)
 # Xiera
 Discord bot used for alerting on Emergency Quests on Phantasy Star Online 2
 
@@ -55,4 +55,4 @@ If you have any questions or something went wrong, please contact me at `MCII#36
 ## Donations
 
 If you wish to support the creation of this bot, just say thanks :p
-Donation links soon XD
+And if you want to donate to this bot, you can click the donation button above
