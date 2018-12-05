@@ -1,4 +1,4 @@
-[![dev chat](https://discordapp.com/api/guilds/433519694977302528/widget.png?style=shield)](https://discord.gg/fVsYCp3)[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SYJ9PCCAPPJ7U)
+[![dev chat](https://discordapp.com/api/guilds/312824132897341440/widget.png?style=shield)](https://discord.gg/fVsYCp3)[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=SYJ9PCCAPPJ7U)
 # Xiera
 Discord bot used for alerting on Emergency Quests on Phantasy Star Online 2
 
@@ -50,7 +50,7 @@ All the following commands can be run by mentioning the bot and only work for se
 
 ## Support
 
-If you have any questions or something went wrong, please contact me at `MCII#3619` or `[ Ari Knight ]#9453` [or my discord server](http://discord.gg/fVsYCp3) or Rodrigo at `Kaze#0001` or on Rodrigo's [server](https://discord.gg/0xMXCNAFbH032Ig1).
+If you have any questions or something went wrong, please contact me at `MCII#3619` or `[ Ari Knight ]#9453` [or my discord server](https://discord.gg/uKDqmG8) or Rodrigo at `Kaze#0001` or on Rodrigo's [server](https://discord.gg/0xMXCNAFbH032Ig1).
 
 ## Donations
 
