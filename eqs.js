@@ -4,7 +4,7 @@ const moment = require('moment');
 
 module.exports = async (client) => {
     try {
-        const response = await fetch('http://35.200.25.13:5000/eq');
+        const response = await fetch('http://35.200.25.13:5000/eq'); //this api is in my server, so if you want to add api from your server, change this to your own address
         if (response.status !== 200) return;
 
         const data = await response.json();
