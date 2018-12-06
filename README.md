@@ -2,11 +2,11 @@
 # Xiera
 Discord bot used for alerting on Emergency Quests on Phantasy Star Online 2
 
-Hello Xiera here, a Discord bot who's main functionality is to alert for Emergency Quests that happen on Phantasy Star Online 2. Ported from Rodrigo's [Weeb Bot](https://github.com/RodrigoLeiteF/WeebBot-v2)
+Hello Xiera here! a Discord bot who's main functionality is to alert for Emergency Quests that happen on Phantasy Star Online 2. Ported from Rodrigo's [Weeb Bot](https://github.com/RodrigoLeiteF/WeebBot-v2)
 
 ## How to use
 
-If you simply wish to have the bot on your server, just [click here]( https://discordapp.com/oauth2/authorize?client_id=440357771704139787&scope=bot&permissions=0) and use the `!alerts` command to enable the EQ alerts.
+If you simply wish to have the bot on your server, just [click here](https://discordapp.com/oauth2/authorize?client_id=440357771704139787&scope=bot&permissions=536345849) and use the `!alerts` command to enable the EQ alerts.
 
 ## Dependencies
 
@@ -40,7 +40,7 @@ If you want to re-host the bot, you'll need to edit the `config.json` file with 
 All the following commands can be run by mentioning the bot and only work for server admins.
 
 - `groups`: Lists all command groups.
-- `prefix <prefix>`: Changes the bot's prefix to `<prefix>`. (Example: `@Weeb Bot prefix -` changes the prefix to `-`)
+- `prefix <prefix>`: Changes the bot's prefix to `<prefix>`. (Example: `@Xiera prefix -` changes the prefix to `-`)
 - `enable <group or command>`: Enables `<group or command>` to be used in this server.
 - `disable <group or command>`: Disables `<group or command>` to be used in this server.
 
