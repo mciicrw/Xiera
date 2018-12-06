@@ -28,7 +28,7 @@ If you want to re-host the bot, you'll need to edit the `config.json` file with 
 - `alerts`: Enables EQ alerts.
 - `dalerts`: Disables EQ alerts.
 - `builds`: Displays current meta builds.
-- `bumped`: Enables alerts for new articles on [Bumped](http://bumped.org/psublog);
+- `bumped`: Enables alerts for new articles on [Bumped](http://bumped.org/psublog).
 
 #### Card games
 
@@ -40,7 +40,7 @@ If you want to re-host the bot, you'll need to edit the `config.json` file with 
 All the following commands can be run by mentioning the bot and only work for server admins.
 
 - `groups`: Lists all command groups.
-- `prefix <prefix>`: Changes the bot's prefix to `<prefix>`. (Example: `@Xiera prefix -` changes the prefix to `-`)
+- `prefix <prefix>`: Changes the bot's prefix to `<prefix>`. (Example: `@Xiera prefix -` changes the prefix to `-`, but you can still mention xiera and use it as prefix)
 - `enable <group or command>`: Enables `<group or command>` to be used in this server.
 - `disable <group or command>`: Disables `<group or command>` to be used in this server.
 
