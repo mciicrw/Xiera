@@ -6,8 +6,8 @@ module.exports = class PSO2Commands extends Commando.Command {
             name: "alerts",
             group: "pso2",
             memberName: "alerts",
-            description: "Enables EQ alerts",
-            examples: ["alerts #general 5, 7, 9"],
+            description: "Enables EQ alerts. separate each ship with space\nAnd the alert only available for 1 channel, if you edit the alert channel (like doing this command for another channel) the current channel will stop alerting",
+            examples: ["<prefix>alerts #general 5[space]7[space]9"],
             guildOnly: true,
 
             args: [
@@ -44,10 +44,10 @@ module.exports = class PSO2Commands extends Commando.Command {
         dict["channel"] = channel.id;
 
         this.client.provider.set(msg.guild, "alerts", dict);
-        return msg.channel.sendMessage(`${msg.author}`, {embed:
+        return msg.channel.send(`${msg.author}`, {embed:
             {
             color: 3447003,
-            description: (`Alerts successfully enabled for : \n\n\`ship(s)\` : **${args.ships.join(', ')}** \n\`on channel\` : **#${args.channel.name}**`)
+            description: (`:ballot_box_with_check: Alerts successfully enabled for : \n\n\ **Ship(s)** : ${args.ships.join(', ')} \n\ **On Channel** : #${args.channel.name}`)
             }
         });
     }
