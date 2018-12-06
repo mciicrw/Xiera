@@ -14,7 +14,7 @@ module.exports = class PSO2Commands extends Commando.Command {
 
     async run(msg, args, client) {
         try {
-            const data = await (await fetch('http://159.65.1.209:5000/daily')).json();
+            const data = await (await fetch('http://159.65.1.209:5000/daily')).json(); //this api is in my server, so if you want to use api from your server, change this to your api address
 
             return msg.reply("", {
                 embed: {
