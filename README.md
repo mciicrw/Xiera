@@ -44,7 +44,7 @@ All the following commands can be run by mentioning the bot and only work for se
 - `enable <group or command>`: Enables `<group or command>` to be used in this server.
 - `disable <group or command>`: Disables `<group or command>` to be used in this server.
 
-#### Experimental
+#### Experimental (not yet can be used)
 - `alertsdo`: Enables Daily Order alerts.
 - `dalertsdo`: Disables Daily Order alerts.
 
@@ -54,5 +54,5 @@ If you have any questions or something went wrong, please contact me at `MCII#36
 
 ## Donations
 
-If you wish to support the creation of this bot, just say thanks :p
-And if you want to donate to this bot, you can click the donation button above
+If you want to donate to this bot, you can click the donation button above
+thank you
