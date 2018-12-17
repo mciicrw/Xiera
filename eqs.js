@@ -16,7 +16,6 @@ module.exports = async (client) => {
 
             for (let guild of guilds) {
                 let settings = await client.provider.get(guild[1], "alerts");
-                let mention = await client.provider.get(guild[1], "role");
                 let eqs = data[0]["eqs"].filter(item => { return settings["ships"].includes(item["ship"]) });
                 let format = [];
                 
@@ -26,33 +25,42 @@ module.exports = async (client) => {
                 if (eqs.length <= 0) continue;
                 if (eqs.length > 0 && eqs.length !== 10) {
                     for (let eq of eqs) {
-                        format.push(`**SHIP ${eq['ship']}:** ${eq['name']}`);
+                        format.push(`**SHIP ${eq['ship']} :**\n${eq['name']}`);
                     }
                 }
                 else {
-                    for (let eq of eqs) {
-                        format.push(`**ALL SHIPS:** ${eq['name']}`);
+                        format.push(`**ALL SHIPS:**\n${eqs[0]['name']}`);
                     }
-                }
-
-                let donationString = "\n\nSupport Our Server to help this bot keep alive!\n(just click the link above)";
-                let time = moment(data[0]["when"]);
-                let string = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH:MM")} JST**\n${format.join('\n')}${cache["i"] === 10 ? donationString : ''}`;
                 
+
+                let donationString = "Support Our Server to help this bot keep alive!";
+                let time = moment(data[0]["when"]);
+                let string = format.join('\n\n');
+                let titler = `EQ Notice on ${time.utcOffset('+0900').format("HH:MM")} JST`;
+                let footers = donationString;
+                let embed = {
+                    embed:
+                        {
+                            
+                            title: `Phantasy Star Online 2 Emergency Quest (click to donate the bot)`,
+                            url: "https://goo.gl/vo56Kj",
+                            description: string,
+                            thumbnail: {
+                                url: "http://bumped.org/psublog/wp-content/uploads/2011/04/logo_pso2.png"
+                            },
+                            author: {
+                                name: titler,
+                                icon_url: "https://lh3.googleusercontent.com/-q2UouE29NsY/XBb3cfG-48I/AAAAAAAAAkI/a340upmcEm8UKxMstfUYpPL3TA2Ty64ygCHMYCw/s0/2018-12-17_09-08-24.png"
+                            },
+                            footer: {
+                                icon_url: 'https://lh3.googleusercontent.com/-bcuH8xG81Zc/XBb4LTC8u3I/AAAAAAAAAkQ/fudH4K_9Uz4jf1Uqv-PTwUebIoVKPbCMQCHMYCw/s0/69927141_p0_master1200.png',
+                                text: footers
+                                }
+                        }
+                    };               
                 if (channel.type == "text" && channel.permissionsFor(client.user).has("SEND_MESSAGES") && channel.permissionsFor(client.user).has("READ_MESSAGES") && guild[1].available) {
                     try {
-                        await client.channels.get(settings['channel']).send(mention['role'], {
-                        embed:
-                            {
-                                color: 3447003,
-                                title: `Phantasy Star Online 2 Emergency Quest (click to donate the bot)`,
-                                url: "https://goo.gl/vo56Kj",
-                                thumbnail: {
-                                    url: "http://bumped.org/psublog/wp-content/uploads/2011/04/logo_pso2.png"
-                                },
-                                description: string
-                            }
-                        });
+                        await client.channels.get(settings['channel']).send("", embed);
                     } catch (err) {
                         continue;
                     }
