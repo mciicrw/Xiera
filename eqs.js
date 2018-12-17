@@ -36,7 +36,7 @@ module.exports = async (client) => {
                 let donationString = "Support Our Server to help this bot keep alive!";
                 let time = moment(data[0]["when"]);
                 let string = format.join('\n\n');
-                let titler = `EQ Notice on ${time.utcOffset('+0900').format("HH:MM")} JST`;
+                let titler = `EQ Notice on ${time.utcOffset('+0900').format("HH")} JST`;
                 let footers = donationString;
                 let embed = {
                     embed:
@@ -71,3 +71,27 @@ module.exports = async (client) => {
         console.error(err);
     }
 }
+/*                let titler = `:watch:**EQ Notice on** **${time.utcOffset('+0900').format("HH:MM")} JST**`;
+                let string = format.join(',');
+//                let editformat = `[${string}]`
+                let footers = donationString;
+                let embed = {
+                    embed:
+                        {
+                            
+                            title: `Phantasy Star Online 2 Emergency Quest (click to donate the bot)`,
+                            url: "https://goo.gl/vo56Kj",
+                            thumbnail: {
+                                url: "http://bumped.org/psublog/wp-content/uploads/2011/04/logo_pso2.png"
+                            },
+                            author: {
+                                name: titler},
+                            footer: {
+                                icon_url: 'https://lh3.googleusercontent.com/-RQW9qIM2acM/XAS_9DYpW7I/AAAAAAAAAiY/KJw0Mg1GHoYwyNPDPuGc7K_pxA29mQ5ogCHMYCw/s0/me.jpg',
+                                text: footers
+                                },
+                            fields: [string]
+                        }
+                    };
+ */               
+                
