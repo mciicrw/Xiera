@@ -25,17 +25,17 @@ module.exports = async (client) => {
                 if (eqs.length <= 0) continue;
                 if (eqs.length > 0 && eqs.length !== 10) {
                     for (let eq of eqs) {
-                        format.push(`**SHIP ${eq['ship']} :**\n${eq['name']}`);
+                        format.push(`**SHIP ${eq['ship']} :**\n${eq['name']}\n`);
                     }
                 }
                 else {
-                        format.push(`**ALL SHIPS:**\n${eqs[0]['name']}`);
+                        format.push(`**ALL SHIPS:**\n${eqs[0]['name']}\n`);
                     }
                 
 
                 let donationString = "Support Our Server to help this bot keep alive!";
                 let time = moment(data[0]["when"]);
-                let string = format.join('\n\n');
+                let string = format.join('\n');
                 let titler = `EQ Notice on ${time.utcOffset('+0900').format("HH")} JST`;
                 let footers = donationString;
                 let embed = {
