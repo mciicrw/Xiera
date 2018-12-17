@@ -25,7 +25,8 @@ const config = require('./config.json')
 
 const client = new Commando.Client({
     owner: '296442142203576321',
-    commandPrefix: config.prefix
+    commandPrefix: config.prefix,
+    unknownCommandResponse: false
 });
 
 client
