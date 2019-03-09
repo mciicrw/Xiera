@@ -6,11 +6,12 @@ Hello Xiera here! a Discord bot who's main functionality is to alert for Emergen
 
 ## How to use
 
-If you simply wish to have the bot on your server, just [click here](https://discordapp.com/oauth2/authorize?client_id=440357771704139787&scope=bot&permissions=536345849) and use the `!alerts` command to enable the EQ alerts.
+If you simply wish to have the bot on your server, just [click here](https://discordapp.com/oauth2/authorize?client_id=550576031145132036&scope=bot&permissions=537263184) and use the `!alerts` command to enable the EQ alerts.
 
 ## Dependencies
 
-- [Node 8+](https://nodejs.org/en/download/current/)
+- [Node 8+](https://nodejs.org/en/download/current/)(Node 10 is recommended)
+- Node Dependencies for bot can be found [here](https://github.com/mciicrw/Xiera/blob/master/package.json)
 
 If you want to re-host the bot, you'll need to edit the `config.json` file with your bot's token, navigate into the bot's directory and run `npm install`.
 
